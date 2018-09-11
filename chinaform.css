@@ -1,0 +1,575 @@
+/*Interface*/
+
+body {
+  background-color: #feffc9;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
+.container {
+  boder-box: box-sizing;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header header header"
+    "aside1 main main main main main"
+    "footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: yellow;
+  border-left: 2px solid red;
+  border-top: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 80px;
+}
+
+.aside-1 {
+  grid-area: aside1;
+  background-color: yellow;
+  border-left: 2px solid red;
+}
+
+.aside-1 h2 {
+  margin-left: 15px;
+  text-shadow: 0.5px 0.5px red;
+  margin-top: 28px;
+}
+
+.aside-1 h4 {
+  margin-left: 15px;
+  margin-top: 40px;
+}
+
+.main {
+  grid-area: main;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 80px;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+}
+.footer img {
+  display: none;
+}
+
+.click {
+  display: flex;
+  margin-top: 20px;
+  font-size: 26px;
+  color: red;
+}
+
+img {
+  width: 90px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.clickcopy {
+  font-size: 12px;
+}
+/*Form*/
+
+.container-personal {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "fullname lastname lastname lastname photo"
+    "fullname middlename middlename middlename photo"
+    "fullname firstname firstname firstname photo"
+    "chinesename chinesename othernames othernames photo"
+    "sex sex dob dob photo"
+    "currentnationality currentnationality formernationality formernationality formernationality"
+    "pob pob pob pob pob"
+    "localid localid localid localid localid"
+    "passport passport passporttype passporttype passporttype"
+    "passportnumber passportnumber doi doi doi"
+    "poi poi doe doe doe"
+    "occupation occupationtype  occupationtype occupationtype occupationtype"
+    "education educationtype educationtype educationtype educationtype"
+    "employer employername employername employernumber employernumber"
+    "employer employeraddress employeraddress employerzip employerzip"
+    "homeaddress homeaddress homeaddress homezip homezip"
+    "homephone homephone homephone email email"
+    "maritalstatus maritalstatustype maritalstatustype maritalstatustype maritalstatustype"
+    "majorfamily majorfamilyinfo majorfamilyinfo majorfamilyinfo majorfamilyinfo"
+    "emergency emergencyname emergencyname emergencynumber emergencynumber"
+    "emergency emergencyrelationship emergencyrelationship emergencyrelationship emergencyrelationship"
+    "emergencylocation emergencylocation emergencylocation emergencylocationtype emergencylocationtype";
+}
+
+.box {
+  padding: 5px;
+  display: flex;
+
+  align-items: center;
+  min-height: 30px;
+}
+
+label {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  width: 20%;
+}
+
+input {
+  border: 1px solid #ffdbdb;
+  flex-grow: 1;
+  height: 20px;
+  background-color: #fcf4f4;
+}
+
+[type="radio"] {
+  height: 11px;
+  display: flex;
+}
+
+[for="currentnationality"],
+[for="chinesename"] {
+  width: 25%;
+}
+
+[type="file"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 50%;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box1 {
+  grid-area: fullname;
+}
+
+.box2 {
+  grid-area: lastname;
+  border-bottom: none;
+}
+
+.box3 {
+  grid-area: photo;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.box4 {
+  grid-area: middlename;
+  border-top: none;
+  border-bottom: none;
+}
+
+.box5 {
+  grid-area: firstname;
+  border-top: none;
+}
+
+.box6 {
+  grid-area: chinesename;
+}
+
+.box7 {
+  grid-area: othernames;
+}
+
+.box8 {
+  grid-area: sex;
+}
+
+.box9 {
+  grid-area: dob;
+}
+
+.box10 {
+  grid-area: currentnationality;
+}
+
+.box11 {
+  grid-area: formernationality;
+}
+
+.box12 {
+  grid-area: pob;
+}
+
+.box13 {
+  grid-area: localid;
+}
+
+.box14 {
+  grid-area: passport;
+  border-right: none;
+}
+
+.box15 {
+  grid-area: passporttype;
+  display: grid;
+  grid-template-columns: 25px 1fr 25px 1fr;
+  border-left: none;
+}
+
+.box16 {
+  grid-area: passportnumber;
+}
+
+.box17 {
+  grid-area: doi;
+}
+
+.box18 {
+  grid-area: poi;
+}
+
+.box19 {
+  grid-area: doe;
+}
+
+.box20 {
+  grid-area: occupation;
+  border-right: none;
+}
+
+.box21 {
+  grid-area: occupationtype;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 240px;
+  border-left: none;
+}
+
+.box22 {
+  grid-area: education;
+  border-right: none;
+}
+
+.box23 {
+  grid-area: educationtype;
+  justify-content: flex-start;
+  border-left: none;
+}
+
+.box24 {
+  grid-area: employer;
+  border-right: none;
+}
+
+.box25 {
+  grid-area: employername;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.box26 {
+  grid-area: employernumber;
+  border-bottom: none;
+  border-left: none;
+}
+
+.box27 {
+  grid-area: employeraddress;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.box28 {
+  grid-area: employerzip;
+  border-top: none;
+  border-left: none;
+}
+
+.box29 {
+  grid-area: homeaddress;
+}
+
+.box30 {
+  grid-area: homezip;
+}
+
+.box31 {
+  grid-area: homephone;
+}
+
+.box32 {
+  grid-area: email;
+}
+
+.box33 {
+  grid-area: maritalstatus;
+  border-right: none;
+}
+
+.box34 {
+  grid-area: maritalstatustype;
+  justify-content: flex-start;
+  border-left: none;
+}
+
+.box35 {
+  grid-area: majorfamily;
+}
+
+.box36 {
+  grid-area: majorfamilyinfo;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "sub-name sub-nationality sub-occupation sub-relationship"
+    "sub-name-p1 sub-nationality-p1 sub-occupation-p1 sub-relationship-p1"
+    "sub-name-p2 sub-nationality-p2 sub-occupation-p2 sub-relationship-p2"
+    "sub-name-p3 sub-nationality-p3 sub-occupation-p3 sub-relationship-p3"
+    "sub-name-p4 sub-nationality-p4 sub-occupation-p4 sub-relationship-p4";
+}
+
+.sub {
+  padding: 3px;
+  place-self: center;
+}
+.sub1 {
+  grid-area: sub-name;
+}
+.sub2 {
+  grid-area: sub-nationality;
+}
+.sub3 {
+  grid-area: sub-occupation;
+}
+.sub4 {
+  grid-area: sub-relationship;
+}
+.sub5 {
+  grid-area: sub-name-p1;
+}
+.sub6 {
+  grid-area: sub-nationality-p1;
+}
+.sub7 {
+  grid-area: sub-occupation-p1;
+}
+.sub8 {
+  grid-area: sub-relationship-p1;
+}
+.sub9 {
+  grid-area: sub-name-p2;
+}
+.sub10 {
+  grid-area: sub-nationality-p2;
+}
+.sub11 {
+  grid-area: sub-occupation-p2;
+}
+.sub12 {
+  grid-area: sub-relationship-p2;
+}
+.sub13 {
+  grid-area: sub-name-p3;
+}
+.sub14 {
+  grid-area: sub-nationality-p3;
+}
+.sub15 {
+  grid-area: sub-occupation-p3;
+}
+.sub16 {
+  grid-area: sub-relationship-p3;
+}
+.sub17 {
+  grid-area: sub-name-p4;
+}
+.sub18 {
+  grid-area: sub-nationality-p4;
+}
+.sub19 {
+  grid-area: sub-occupation-p4;
+}
+.sub20 {
+  grid-area: sub-relationship-p4;
+}
+
+.box37 {
+  grid-area: emergency;
+}
+.box38 {
+  grid-area: emergencyname;
+  border-right: none;
+  border-bottom: none;
+}
+.box39 {
+  grid-area: emergencynumber;
+  border-left: none;
+  border-bottom: none;
+}
+.box40 {
+  grid-area: emergencyrelationship;
+  border-top: none;
+}
+.box41 {
+  grid-area: emergencylocation;
+  border-right: none;
+}
+.box42 {
+  grid-area: emergencylocationtype;
+  border-left: none;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 1100px) {
+  .container {
+    boder-box: box-sizing;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "main main "
+      "footer  footer";
+  }
+
+  .aside-1 {
+    display: none;
+  }
+
+  header {
+    border-right: 2px solid red;
+  }
+
+  footer {
+    border-right: 2px solid red;
+  }
+
+  .container-personal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "fullname fullname fullname"
+      "photo lastname lastname"
+      "photo middlename middlename"
+      "photo firstname firstname"
+      "chinesename  othernames  othernames"
+      "sex dob dob"
+      "currentnationality currentnationality currentnationality"
+      "formernationality formernationality formernationality"
+      "pob localid localid"
+      "passport passporttype passporttype "
+      "passportnumber doi doi"
+      " poi doe doe"
+      "occupation occupation occupation"
+      "occupationtype occupationtype occupationtype"
+      "education educationtype educationtype"
+      "employer employername employernumber"
+      "employer employeraddress employerzip"
+      "homeaddress homeaddress homezip"
+      "homephone homephone  email"
+      "maritalstatus maritalstatustype maritalstatustype"
+      "majorfamily majorfamily majorfamily"
+      "majorfamilyinfo majorfamilyinfo majorfamilyinfo"
+      "emergency emergencyname emergencynumber"
+      "emergency emergencyrelationship emergencyrelationship"
+      "emergencylocation emergencylocation emergencylocationtype";
+  }
+
+  .box {
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    boder-box: box-sizing;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "main "
+      "footer";
+  }
+
+  .aside-1 {
+    display: none;
+  }
+
+  .container-personal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "photo"
+      "fullname"
+      "lastname"
+      "middlename"
+      "firstname"
+      "chinesename"
+      "othernames"
+      "sex"
+      "dob"
+      "currentnationality"
+      "formernationality"
+      "pob"
+      "localid"
+      "passport"
+      "passporttype"
+      "passportnumber"
+      "doi"
+      "poi"
+      "doe"
+      "occupation"
+      "occupationtype"
+      "education"
+      "educationtype"
+      "employer"
+      "employername"
+      "employernumber"
+      "employeraddress"
+      "employerzip"
+      "homeaddress"
+      "homezip"
+      "homephone"
+      "email"
+      "maritalstatus"
+      "maritalstatustype"
+      "majorfamily"
+      "majorfamilyinfo"
+      "emergency"
+      "emergencyname"
+      "emergencynumber"
+      "emergencyrelationship"
+      "emergencylocation"
+      "emergencylocationtype";
+  }
+}
